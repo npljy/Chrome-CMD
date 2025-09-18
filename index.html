@@ -1,13 +1,4 @@
-<!-- 
-## 使用说明
 
-1. 首先选择您使用的操作系统
-2. 检查Chrome路径是否正确（如果不正确请手动修改）
-3. 配置代理、UserAgent和其他选项
-4. 复制生成的命令并在终端/命令提示符中运行
-
-如果仍然遇到问题，请检查Chrome是否安装在指定路径。
--->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -61,8 +52,8 @@
     </script>
 
     <link href="./css/index.css" rel="stylesheet">
+    
 </head>
-
 <body>
     <div class="container">
         <header>
@@ -90,7 +81,8 @@
         
         <div class="config-section">
             <h2><i>🔧</i> 代理设置</h2>
-            <div class="two-columns">
+            
+            <div class="three-columns">
                 <div class="form-group">
                     <label for="proxyType">代理类型</label>
                     <select id="proxyType">
@@ -102,13 +94,20 @@
                 
                 <div class="form-group">
                     <label for="proxyServer">代理服务器地址</label>
-                    <input type="text" id="proxyServer" placeholder="例如: 127.0.0.1:8080">
+                    <input type="text" id="proxyServer" placeholder="例如: 127.0.0.1 或 proxy.example.com">
+                    <p class="proxy-format-hint">只需输入IP或域名，不需要端口</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="proxyPort">代理端口</label>
+                    <input type="number" id="proxyPort" placeholder="例如: 8080" value="8080">
                 </div>
             </div>
             
             <div class="form-group">
                 <label for="proxyBypass">代理绕过列表（可选）</label>
                 <input type="text" id="proxyBypass" placeholder="例如: localhost,127.0.0.1,::1">
+                <p class="path-hint">多个地址用逗号分隔，支持通配符 *</p>
             </div>
         </div>
         
@@ -151,7 +150,7 @@
             <div class="form-group">
                 <div class="checkbox-group">
                     <input type="checkbox" id="incognito">
-                    <label for="incognito">无痕/隐身模式</label>
+                    <label for="incognito">无痕/隐身模式 (--incognito)</label>
                 </div>
                 
                 <div class="checkbox-group">
@@ -187,6 +186,7 @@
                     <p>2. 打开命令提示符(Windows)或终端(Mac/Linux)</p>
                     <p>3. 粘贴并运行命令</p>
                     <p>4. 如果提示"找不到chrome"，请手动修改Chrome路径</p>
+                    <p>5. 验证代理：访问 https://whatismyipaddress.com 查看IP是否改变</p>
                 </div>
             </div>
         </div>
@@ -194,13 +194,15 @@
         <div class="footer">
             <p>提示: 某些参数可能需要关闭所有Chrome实例后才能生效</p>
         </div>
-        <p class="links">友情链接：
+                <p class="links">友情链接：
             <a href="https://m3u8.xuehuayu.cn?utm_source=chromecmd" target="_blank">m3u8在线播放器</a> |
             <a href="https://xuehuayu.cn?utm_source=chromecmd" target="_blank">前端壹菜鸟</a> |
             <a href="https://cainiaoblog.cn?utm_source=chromecmd" target="_blank">菜鸟播客</a>
         </p>
     </div>
-    <script src="./js/index.js"></script>
+
+
+ <script src="./js/index.js"></script>
     <script>
             (function () {
                 var bp = document.createElement('script');
@@ -228,5 +230,6 @@
     <script>
         window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }; gtag('js', new Date()); gtag('config', '#{theme.google_analytics}');
     </script>
+
 </body>
 </html>
