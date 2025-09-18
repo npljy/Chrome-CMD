@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>关于 Chrome 命令行生成器</title>
+    <link href="./css/about.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="about-container">
+        <a href="javascript:history.back()" class="btn-back">← 返回</a>
+
+        <div id="webtraf_17015" style="width:100%;display: flex;justify-content: center; align-items: center;">
+            <script type="text/javascript" src="https://webtrafic.ru/ads.php?uid=17015" async></script>
+        </div>
+
+        <h1>Chrome 命令行生成器</h1>
+        <p class="subtitle">一个可视化工具，用来快速生成 Chrome 启动参数，让你通过选择或填写配置就能得到一条可以复制执行的命令。</p>
+
+        <div class="section">
+            <div class="section-title">是什么</div>
+            <p>Chrome 命令行生成器是一个前端工具，你无需查阅繁复文档，只需通过简洁的 UI 填写或选项切换，就可以得到你想要的 Chrome 启动命令行。</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">功能亮点</div>
+            <ul>
+                <li>直观配置：用户数据目录、启动页 URL、远程调试端口等，一目了然。</li>
+                <li>附加参数支持：隐身模式、无头模式、禁用扩展等常用选项。</li>
+                <li>安全提示：对于存在潜在风险的参数会给予明确标识。</li>
+                <li>一键复制：生成后可快速复制命令，无需手动选中全部内容。</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">快速示例</div>
+            <pre>
+"chrome" --user-data-dir="你的用户数据目录" --remote-debugging-port=9222 --incognito --disable-extensions "https://www.example.com"
+      </pre>
+        </div>
+
+        <div class="section">
+            <div class="section-title">使用建议</div>
+            <ul>
+                <li>尽量使用新的用户数据目录，以免影响现有浏览器配置。</li>
+                <li>在安全环境中使用远程调试端口，避免暴露。</li>
+                <li>不要在生产或公共环境中使用可能降低安全性的参数（比如 <code>--disable-web-security</code>）。</li>
+            </ul>
+        </div>
+
+        <div class="note">
+            注意：某些参数可能会严重影响浏览器的安全性，仅建议在测试或受控环境中启用，不应在普通使用场景或不信任环境中使用。
+        </div>
+
+        <footer>
+            <p class="links">友情链接：
+                <a href="https://m3u8.xuehuayu.cn?utm_source=chrome.xuehuayu.cn" target="_blank">m3u8在线播放器</a> |
+                <a href="https://xuehuayu.cn?utm_source=chrome.xuehuayu.cn" target="_blank">前端壹菜鸟</a> |
+                <a href="https://cainiaoblog.cn?utm_source=chrome.xuehuayu.cn" target="_blank">菜鸟播客</a>
+            </p>
+        </footer>
+
+    </div>
+    <script>
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+    <script>
+        (function () {
+            var src = 'https://jspassport.ssl.qhimg.com/11.0.1.js?#{theme.sll_zhanzhang}';
+            document.write('<script src="' + src + '" id="sozz"><\/script>');
+        })();
+    </script>
+    <script>
+        var _hmt = _hmt || []; (function () { var hm = document.createElement("script"); hm.src = 'https://hm.baidu.com/hm.js?#{theme.baidu_analytics}'; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();
+    </script>
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-150860401-1'>
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }; gtag('js', new Date()); gtag('config', '#{theme.google_analytics}');
+    </script>
+</body>
+
+</html>

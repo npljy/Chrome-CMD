@@ -11,7 +11,6 @@ body {
   background-size: 100% 100%;
   color: #333;
   line-height: 1.6;
-  padding: 20px;
   min-height: 100vh;
 }
 
@@ -22,6 +21,37 @@ body {
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+}
+
+.hd {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.hd .link-list {
+  padding: 0  ;
+  height: 50px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  align-content: center;
+}
+
+.hd .link-list a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hd .link-list a:hover {
+  transform: translateY(-2px);
 }
 
 header {
