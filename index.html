@@ -56,221 +56,220 @@
       <p class="description">通过可视化界面生成Chrome启动参数，配置代理、用户代理等设置</p>
     </header>
 
-    <div id="webtraf_17015" style="width:100%;text-align: center;">
-      <script type="text/javascript" src="https://webtrafic.ru/ads.php?uid=17015" async>
-      </script>
+    <div id="webtraf_17015" style="width:100%;display: flex;justify-content: center; align-items: center;">
+      <script type="text/javascript" src="https://webtrafic.ru/ads.php?uid=17015" async></script>
     </div>
 
-  <div class="config-section">
-  <h2>
-    <i>💻</i> 系统设置
-  </h2>
-  <div class="form-group">
-    <label>选择操作系统</label>
-    <div class="os-selector">
-      <div class="os-btn active" data-os="windows">Windows</div>
-      <div class="os-btn" data-os="macos">macOS</div>
-      <div class="os-btn" data-os="linux">Linux</div>
-    </div>
-    <p class="option-hint">根据操作系统自动设置默认路径和参数</p>
-  </div>
+    <div class="config-section">
+      <h2>
+        <i>💻</i> 系统设置
+      </h2>
+      <div class="form-group">
+        <label>选择操作系统</label>
+        <div class="os-selector">
+          <div class="os-btn active" data-os="windows">Windows</div>
+          <div class="os-btn" data-os="macos">macOS</div>
+          <div class="os-btn" data-os="linux">Linux</div>
+        </div>
+        <p class="option-hint">根据操作系统自动设置默认路径和参数</p>
+      </div>
 
-  <div class="form-group">
-    <label for="chromePath">Chrome可执行文件路径</label>
-    <input type="text" id="chromePath" placeholder="将根据系统自动填充默认路径">
-    <p class="path-hint" id="pathHint">默认路径适用于大多数情况，如果Chrome安装在其他位置，请手动修改</p>
-  </div>
-</div>
-
-<div class="config-section">
-  <h2>
-    <i>🔧</i> 代理设置
-  </h2>
-
-  <div class="three-columns">
-    <div class="form-group">
-      <label for="proxyType">代理类型</label>
-      <select id="proxyType">
-        <option value="http">HTTP/HTTPS</option>
-        <option value="socks4">SOCKS4</option>
-        <option value="socks5">SOCKS5</option>
-      </select>
-      <p class="proxy-format-hint">选择合适的代理协议，常用为 HTTP 或 SOCKS5</p>
+      <div class="form-group">
+        <label for="chromePath">Chrome可执行文件路径</label>
+        <input type="text" id="chromePath" placeholder="将根据系统自动填充默认路径">
+        <p class="path-hint" id="pathHint">默认路径适用于大多数情况，如果Chrome安装在其他位置，请手动修改</p>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label for="proxyServer">代理服务器地址</label>
-      <input type="text" id="proxyServer" placeholder="例如: 127.0.0.1 或 proxy.example.com">
-      <p class="proxy-format-hint">只需输入IP或域名，不需要端口</p>
+    <div class="config-section">
+      <h2>
+        <i>🔧</i> 代理设置
+      </h2>
+
+      <div class="three-columns">
+        <div class="form-group">
+          <label for="proxyType">代理类型</label>
+          <select id="proxyType">
+            <option value="http">HTTP/HTTPS</option>
+            <option value="socks4">SOCKS4</option>
+            <option value="socks5">SOCKS5</option>
+          </select>
+          <p class="proxy-format-hint">选择合适的代理协议，常用为 HTTP 或 SOCKS5</p>
+        </div>
+
+        <div class="form-group">
+          <label for="proxyServer">代理服务器地址</label>
+          <input type="text" id="proxyServer" placeholder="例如: 127.0.0.1 或 proxy.example.com">
+          <p class="proxy-format-hint">只需输入IP或域名，不需要端口</p>
+        </div>
+
+        <div class="form-group">
+          <label for="proxyPort">代理端口</label>
+          <input type="number" id="proxyPort" placeholder="例如 7897 或 3067" value="">
+          <p class="proxy-format-hint">输入代理服务器对应的端口号，例如 7897 或 3067</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="proxyBypass">代理绕过列表（可选）</label>
+        <input type="text" id="proxyBypass" placeholder="例如: localhost,127.0.0.1,::1">
+        <p class="path-hint">多个地址用逗号分隔，支持通配符 *</p>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label for="proxyPort">代理端口</label>
-      <input type="number" id="proxyPort" placeholder="例如 7897 或 3067" value="">
-      <p class="proxy-format-hint">输入代理服务器对应的端口号，例如 7897 或 3067</p>
-    </div>
-  </div>
+    <div class="config-section">
+      <h2>
+        <i>👤</i> 用户代理设置
+      </h2>
+      <div class="form-group">
+        <label for="userAgent">选择用户代理</label>
+        <select id="userAgent">
+          <option value="">-- 默认Chrome用户代理 --</option>
+          <option value="mobile">移动设备 (Android Chrome)</option>
+          <option value="tablet">平板设备 (iPad Safari)</option>
+          <option value="desktop_win">桌面设备 (Windows Chrome)</option>
+          <option value="desktop_mac">桌面设备 (Mac Chrome)</option>
+          <option value="desktop_linux">桌面设备 (Linux Chrome)</option>
+          <option value="firefox">Firefox浏览器</option>
+          <option value="safari">Safari浏览器</option>
+          <option value="edge">Edge浏览器</option>
+          <option value="custom">自定义用户代理</option>
+        </select>
+        <p class="proxy-format-hint">更改浏览器身份标识，常用于调试不同终端访问效果</p>
+      </div>
 
-  <div class="form-group">
-    <label for="proxyBypass">代理绕过列表（可选）</label>
-    <input type="text" id="proxyBypass" placeholder="例如: localhost,127.0.0.1,::1">
-    <p class="path-hint">多个地址用逗号分隔，支持通配符 *</p>
-  </div>
-</div>
+      <div id="customUAContainer" class="custom-ua">
+        <div class="form-group">
+          <label for="customUA">自定义用户代理字符串</label>
+          <input type="text" id="customUA" placeholder="输入自定义用户代理字符串">
+          <p class="ua-example">例如: Mozilla/5.0 (Windows NT 10.0; Win64; x64)...</p>
+          <p class="proxy-format-hint">仅当选择“自定义用户代理”时生效，需输入完整 UA 字符串</p>
+        </div>
+      </div>
 
-<div class="config-section">
-  <h2>
-    <i>👤</i> 用户代理设置
-  </h2>
-  <div class="form-group">
-    <label for="userAgent">选择用户代理</label>
-    <select id="userAgent">
-      <option value="">-- 默认Chrome用户代理 --</option>
-      <option value="mobile">移动设备 (Android Chrome)</option>
-      <option value="tablet">平板设备 (iPad Safari)</option>
-      <option value="desktop_win">桌面设备 (Windows Chrome)</option>
-      <option value="desktop_mac">桌面设备 (Mac Chrome)</option>
-      <option value="desktop_linux">桌面设备 (Linux Chrome)</option>
-      <option value="firefox">Firefox浏览器</option>
-      <option value="safari">Safari浏览器</option>
-      <option value="edge">Edge浏览器</option>
-      <option value="custom">自定义用户代理</option>
-    </select>
-    <p class="proxy-format-hint">更改浏览器身份标识，常用于调试不同终端访问效果</p>
-  </div>
+      <div id="uaPreview" class="form-group">
+        <label>用户代理预览</label>
+        <div class="command-output">
+          <code id="uaPreviewText">尚未选择用户代理</code>
+        </div>
+        <p class="proxy-format-hint">预览最终使用的 UA 字符串，方便确认设置是否正确</p>
+      </div>
+    </div>
 
-  <div id="customUAContainer" class="custom-ua">
-    <div class="form-group">
-      <label for="customUA">自定义用户代理字符串</label>
-      <input type="text" id="customUA" placeholder="输入自定义用户代理字符串">
-      <p class="ua-example">例如: Mozilla/5.0 (Windows NT 10.0; Win64; x64)...</p>
-      <p class="proxy-format-hint">仅当选择“自定义用户代理”时生效，需输入完整 UA 字符串</p>
-    </div>
-  </div>
+    <div class="config-section">
+      <h2>
+        <i>⚙️</i> 高级选项
+      </h2>
 
-  <div id="uaPreview" class="form-group">
-    <label>用户代理预览</label>
-    <div class="command-output">
-      <code id="uaPreviewText">尚未选择用户代理</code>
-    </div>
-    <p class="proxy-format-hint">预览最终使用的 UA 字符串，方便确认设置是否正确</p>
-  </div>
-</div>
+      <!-- 安全相关 已有说明，不改 -->
+      <div class="option-category category-security">
+        <h3>🔒 跨域与安全</h3>
+        <div class="checkbox-group">
+          <input type="checkbox" id="disableWebSecurity">
+          <label for="disableWebSecurity">
+            禁用Web安全策略 (--disable-web-security)
+          </label>
+        </div>
+        <p class="option-hint">允许跨域请求，忽略同源策略 ⚠️ 强烈不推荐在生产环境使用</p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="allowRunningInsecureContent">
+          <label for="allowRunningInsecureContent">允许运行不安全内容 (--allow-running-insecure-content)</label>
+        </div>
+        <p class="option-hint">允许HTTPS页面加载HTTP资源 ⚠️ 可能导致安全警告</p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="disableSiteIsolation">
+          <label for="disableSiteIsolation">禁用站点隔离(--disable-site-isolation-trials)</label>
+        </div>
+        <p class="option-hint">可能提升性能，但会降低安全性 ⚠️ 慎用</p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="reduceSecurity">
+          <label for="reduceSecurity">降低安全级别(--reduce-security-for-testing)</label>
+        </div>
+        <p class="option-hint">用于测试目的，关闭部分安全限制 ⚠️ 不要在日常浏览中启用</p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="ignoreCertErrors">
+          <label for="ignoreCertErrors">忽略证书错误(--ignore-certificate-errors)</label>
+        </div>
+        <p class="option-hint">适合调试HTTPS服务，⚠️ 容易被中间人攻击</p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="noSandbox">
+          <label for="noSandbox">禁用沙箱(--no-sandbox)</label>
+        </div>
+        <p class="option-hint">⚠️ 大幅降低安全性，仅在容器环境或调试时使用</p>
+      </div>
 
-<div class="config-section">
-  <h2>
-    <i>⚙️</i> 高级选项
-  </h2>
+      <!-- 隐私/调试 -->
+      <div class="option-category category-privacy">
+        <h3>🛠️ 隐私与调试</h3>
+        <div class="checkbox-group">
+          <input type="checkbox" id="incognito">
+          <label for="incognito">无痕模式 (--incognito)</label>
+        </div>
+        <p class="option-hint">不会保存浏览历史和缓存，但下载的文件和书签仍会保留</p>
 
-  <!-- 安全相关 已有说明，不改 -->
-  <div class="option-category category-security">
-    <h3>🔒 跨域与安全</h3>
-    <div class="checkbox-group">
-      <input type="checkbox" id="disableWebSecurity">
-      <label for="disableWebSecurity">
-        禁用Web安全策略 (--disable-web-security)
-      </label>
-    </div>
-    <p class="option-hint">允许跨域请求，忽略同源策略 ⚠️ 强烈不推荐在生产环境使用</p>
-    <div class="checkbox-group">
-      <input type="checkbox" id="allowRunningInsecureContent">
-      <label for="allowRunningInsecureContent">允许运行不安全内容 (--allow-running-insecure-content)</label>
-    </div>
-    <p class="option-hint">允许HTTPS页面加载HTTP资源 ⚠️ 可能导致安全警告</p>
-    <div class="checkbox-group">
-      <input type="checkbox" id="disableSiteIsolation">
-      <label for="disableSiteIsolation">禁用站点隔离(--disable-site-isolation-trials)</label>
-    </div>
-    <p class="option-hint">可能提升性能，但会降低安全性 ⚠️ 慎用</p>
-    <div class="checkbox-group">
-      <input type="checkbox" id="reduceSecurity">
-      <label for="reduceSecurity">降低安全级别(--reduce-security-for-testing)</label>
-    </div>
-    <p class="option-hint">用于测试目的，关闭部分安全限制 ⚠️ 不要在日常浏览中启用</p>
-    <div class="checkbox-group">
-      <input type="checkbox" id="ignoreCertErrors">
-      <label for="ignoreCertErrors">忽略证书错误(--ignore-certificate-errors)</label>
-    </div>
-    <p class="option-hint">适合调试HTTPS服务，⚠️ 容易被中间人攻击</p>
-    <div class="checkbox-group">
-      <input type="checkbox" id="noSandbox">
-      <label for="noSandbox">禁用沙箱(--no-sandbox)</label>
-    </div>
-    <p class="option-hint">⚠️ 大幅降低安全性，仅在容器环境或调试时使用</p>
-  </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="remoteDebugging">
+          <label for="remoteDebugging">开启远程调试端口 (--remote-debugging-port=9222)</label>
+        </div>
+        <p class="option-hint">允许外部调试工具连接 ⚠️ 建议仅在本地开发时启用</p>
 
-  <!-- 隐私/调试 -->
-  <div class="option-category category-privacy">
-    <h3>🛠️ 隐私与调试</h3>
-    <div class="checkbox-group">
-      <input type="checkbox" id="incognito">
-      <label for="incognito">无痕模式 (--incognito)</label>
-    </div>
-    <p class="option-hint">不会保存浏览历史和缓存，但下载的文件和书签仍会保留</p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="noFirstRun">
+          <label for="noFirstRun">跳过首次运行检查 (--no-first-run)</label>
+        </div>
+        <p class="option-hint">适合自动化测试，避免首次启动时的欢迎页面</p>
+      </div>
 
-    <div class="checkbox-group">
-      <input type="checkbox" id="remoteDebugging">
-      <label for="remoteDebugging">开启远程调试端口 (--remote-debugging-port=9222)</label>
-    </div>
-    <p class="option-hint">允许外部调试工具连接 ⚠️ 建议仅在本地开发时启用</p>
+      <!-- 界面行为 -->
+      <div class="option-category category-ui">
+        <h3>🖥️ 界面与行为</h3>
+        <div class="checkbox-group">
+          <input type="checkbox" id="disableExtensions">
+          <label for="disableExtensions">禁用扩展程序 (--disable-extensions)</label>
+        </div>
+        <p class="option-hint">启动时不会加载已安装的扩展，适合排查扩展兼容性问题</p>
 
-    <div class="checkbox-group">
-      <input type="checkbox" id="noFirstRun">
-      <label for="noFirstRun">跳过首次运行检查 (--no-first-run)</label>
-    </div>
-    <p class="option-hint">适合自动化测试，避免首次启动时的欢迎页面</p>
-  </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="disableGpu">
+          <label for="disableGpu">禁用GPU加速 (--disable-gpu)</label>
+        </div>
+        <p class="option-hint">在某些虚拟机或显卡驱动异常时使用 ⚠️ 可能降低性能</p>
 
-  <!-- 界面行为 -->
-  <div class="option-category category-ui">
-    <h3>🖥️ 界面与行为</h3>
-    <div class="checkbox-group">
-      <input type="checkbox" id="disableExtensions">
-      <label for="disableExtensions">禁用扩展程序 (--disable-extensions)</label>
-    </div>
-    <p class="option-hint">启动时不会加载已安装的扩展，适合排查扩展兼容性问题</p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="startMaximized">
+          <label for="startMaximized">启动时最大化 (--start-maximized)</label>
+        </div>
+        <p class="option-hint">适合需要全屏展示的场景，例如演示或自动化脚本</p>
 
-    <div class="checkbox-group">
-      <input type="checkbox" id="disableGpu">
-      <label for="disableGpu">禁用GPU加速 (--disable-gpu)</label>
-    </div>
-    <p class="option-hint">在某些虚拟机或显卡驱动异常时使用 ⚠️ 可能降低性能</p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="disablePopupBlocking">
+          <label for="disablePopupBlocking">禁用弹窗拦截 (--disable-popup-blocking)</label>
+        </div>
+        <p class="option-hint">允许网站自由打开新窗口 ⚠️ 可能导致广告弹窗</p>
 
-    <div class="checkbox-group">
-      <input type="checkbox" id="startMaximized">
-      <label for="startMaximized">启动时最大化 (--start-maximized)</label>
-    </div>
-    <p class="option-hint">适合需要全屏展示的场景，例如演示或自动化脚本</p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="disableInfobars">
+          <label for="disableInfobars">禁用自动化提示 (--disable-infobars)</label>
+        </div>
+        <p class="option-hint">移除 "Chrome 正在受到自动测试软件控制" 提示，常用于自动化测试</p>
+      </div>
 
-    <div class="checkbox-group">
-      <input type="checkbox" id="disablePopupBlocking">
-      <label for="disablePopupBlocking">禁用弹窗拦截 (--disable-popup-blocking)</label>
-    </div>
-    <p class="option-hint">允许网站自由打开新窗口 ⚠️ 可能导致广告弹窗</p>
+      <!-- 网络优化 -->
+      <div class="option-category category-network">
+        <h3>🌐 网络相关</h3>
+        <div class="checkbox-group">
+          <input type="checkbox" id="disableTranslate">
+          <label for="disableTranslate">禁用自动翻译 (--disable-translate)</label>
+        </div>
+        <p class="option-hint">关闭 Google 翻译提示，适合测试多语言页面</p>
 
-    <div class="checkbox-group">
-      <input type="checkbox" id="disableInfobars">
-      <label for="disableInfobars">禁用自动化提示 (--disable-infobars)</label>
+        <div class="checkbox-group">
+          <input type="checkbox" id="disableBackgroundNetworking">
+          <label for="disableBackgroundNetworking">禁用后台网络服务 (--disable-background-networking)</label>
+        </div>
+        <p class="option-hint">阻止 Chrome 在后台发起额外请求 ⚠️ 可能影响正常功能</p>
+      </div>
     </div>
-    <p class="option-hint">移除 "Chrome 正在受到自动测试软件控制" 提示，常用于自动化测试</p>
-  </div>
-
-  <!-- 网络优化 -->
-  <div class="option-category category-network">
-    <h3>🌐 网络相关</h3>
-    <div class="checkbox-group">
-      <input type="checkbox" id="disableTranslate">
-      <label for="disableTranslate">禁用自动翻译 (--disable-translate)</label>
-    </div>
-    <p class="option-hint">关闭 Google 翻译提示，适合测试多语言页面</p>
-
-    <div class="checkbox-group">
-      <input type="checkbox" id="disableBackgroundNetworking">
-      <label for="disableBackgroundNetworking">禁用后台网络服务 (--disable-background-networking)</label>
-    </div>
-    <p class="option-hint">阻止 Chrome 在后台发起额外请求 ⚠️ 可能影响正常功能</p>
-  </div>
-</div>
 
 
     <div class="config-section">
@@ -297,9 +296,9 @@
 
     <div class="footer">
       <p class="links">友情链接：
-        <a href="https://chrome.xuehuayu.cn?utm_source=m3u8player" target="_blank">Chrome命令行参数生成器</a> |
-        <a href="https://xuehuayu.cn?utm_source=m3u8player" target="_blank">前端壹菜鸟</a> |
-        <a href="https://cainiaoblog.cn?utm_source=m3u8player" target="_blank">菜鸟播客</a>
+        <a href="https://m3u8.xuehuayu.cn?utm_source=chrome.xuehuayu.cn" target="_blank">m3u8在线播放器</a> |
+        <a href="https://xuehuayu.cn?utm_source=chrome.xuehuayu.cn" target="_blank">前端壹菜鸟</a> |
+        <a href="https://cainiaoblog.cn?utm_source=chrome.xuehuayu.cn" target="_blank">菜鸟播客</a>
       </p>
     </div>
   </div>
@@ -322,8 +321,7 @@
   <script>
     (function () {
       var src = 'https://jspassport.ssl.qhimg.com/11.0.1.js?#{theme.sll_zhanzhang}';
-      document.write('<script src="' + src + '" id="sozz">
-        <\/script>');
+      document.write('<script src="' + src + '" id="sozz"><\/script>');
     })();
   </script>
   <script>
