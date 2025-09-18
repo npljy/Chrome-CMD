@@ -1,34 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chrome命令行参数生成器 - 免费好用专业的在线Chrome命令行参数生成器 -菜鸟工具箱</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="免费好用专业的在线Chrome命令行参数生成器，无需安装，无需下载软件，即可直接生成Chrome命令行参数。">
+  <meta name="keywords" content="Chrome, 命令行, 参数, 生成器, Chrome命令行参数生成器">
 
+  <!-- 3. 开放图谱 (Open Graph) - 用于社交分享 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="免费好用专业的在线Chrome命令行参数生成器">
+  <meta property="og:description" content="无需安装，无需下载软件，即可直接生成Chrome命令行参数。">
+  <meta property="og:url" content="https://chrome.xuehuayu.cn/">
+  <meta property="og:site_name" content="免费好用专业的在线Chrome命令行参数生成器">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="免费好用专业的在线Chrome命令行参数生成器，无需安装，无需下载软件，即可直接生成Chrome命令行参数。">
-    <meta name="keywords" content="Chrome, 命令行, 参数, 生成器, Chrome命令行参数生成器">
+  <!-- 4. Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="免费好用专业的在线Chrome命令行参数生成器">
+  <meta name="twitter:description" content="免费好用专业的在线Chrome命令行参数生成器。">
 
-    <!-- 3. 开放图谱 (Open Graph) - 用于社交分享 -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="免费好用专业的在线Chrome命令行参数生成器">
-    <meta property="og:description" content="无需安装，无需下载软件，即可直接生成Chrome命令行参数。">
-    <meta property="og:url" content="https://chrome.xuehuayu.cn/">
-    <meta property="og:site_name" content="免费好用专业的在线Chrome命令行参数生成器">
+  <!-- 6. 规范链接 -->
+  <link rel="canonical" href="https://chrome.xuehuayu.cn/">
 
-    <!-- 4. Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="免费好用专业的在线Chrome命令行参数生成器">
-    <meta name="twitter:description" content="免费好用专业的在线Chrome命令行参数生成器。">
-
-    <!-- 6. 规范链接 -->
-    <link rel="canonical" href="https://chrome.xuehuayu.cn/">
-
-    <!-- 5. 最重要的：结构化数据 (声明这是一个Web应用) -->
-    <script type="application/ld+json">
+  <!-- 5. 最重要的：结构化数据 (声明这是一个Web应用) -->
+  <script type="application/ld+json">
     {
         "@context": "https://chrome.xuehuayu.cn",
         "@type": "WebApplication",
@@ -51,189 +47,215 @@
     }
     </script>
 
-    <link href="./css/index.css" rel="stylesheet">
-    
+  <link href="./css/index.css" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>Chrome命令行参数生成器</h1>
-            <p class="description">通过可视化界面生成Chrome启动参数，配置代理、用户代理等设置</p>
-        </header>
+  <div class="container">
+    <header>
+      <h1>Chrome命令行参数生成器</h1>
+      <p class="description">通过可视化界面生成Chrome启动参数，配置代理、用户代理等设置</p>
+    </header>
 
-        <div id="webtraf_17015" style="width:100%;text-align: center;">
-            <script type="text/javascript" src="https://webtrafic.ru/ads.php?uid=17015" async></script>
-        </div>
-
-        <div class="config-section">
-            <h2><i>💻</i> 系统设置</h2>
-            <div class="form-group">
-                <label>选择操作系统</label>
-                <div class="os-selector">
-                    <div class="os-btn active" data-os="windows">Windows</div>
-                    <div class="os-btn" data-os="macos">macOS</div>
-                    <div class="os-btn" data-os="linux">Linux</div>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="chromePath">Chrome可执行文件路径</label>
-                <input type="text" id="chromePath" placeholder="将根据系统自动填充默认路径">
-                <p class="path-hint" id="pathHint">默认路径适用于大多数情况，如果Chrome安装在其他位置，请手动修改</p>
-            </div>
-        </div>
-        
-        <div class="config-section">
-            <h2><i>🔧</i> 代理设置</h2>
-            
-            <div class="three-columns">
-                <div class="form-group">
-                    <label for="proxyType">代理类型</label>
-                    <select id="proxyType">
-                        <option value="http">HTTP/HTTPS</option>
-                        <option value="socks4">SOCKS4</option>
-                        <option value="socks5">SOCKS5</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="proxyServer">代理服务器地址</label>
-                    <input type="text" id="proxyServer" placeholder="例如: 127.0.0.1 或 proxy.example.com">
-                    <p class="proxy-format-hint">只需输入IP或域名，不需要端口</p>
-                </div>
-                
-                <div class="form-group">
-                    <label for="proxyPort">代理端口</label>
-                    <input type="number" id="proxyPort" placeholder="例如: 8080" value="8080">
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="proxyBypass">代理绕过列表（可选）</label>
-                <input type="text" id="proxyBypass" placeholder="例如: localhost,127.0.0.1,::1">
-                <p class="path-hint">多个地址用逗号分隔，支持通配符 *</p>
-            </div>
-        </div>
-        
-        <div class="config-section">
-            <h2><i>👤</i> 用户代理设置</h2>
-            <div class="form-group">
-                <label for="userAgent">选择用户代理</label>
-                <select id="userAgent">
-                    <option value="">-- 默认Chrome用户代理 --</option>
-                    <option value="mobile">移动设备 (Android Chrome)</option>
-                    <option value="tablet">平板设备 (iPad Safari)</option>
-                    <option value="desktop_win">桌面设备 (Windows Chrome)</option>
-                    <option value="desktop_mac">桌面设备 (Mac Chrome)</option>
-                    <option value="desktop_linux">桌面设备 (Linux Chrome)</option>
-                    <option value="firefox">Firefox浏览器</option>
-                    <option value="safari">Safari浏览器</option>
-                    <option value="edge">Edge浏览器</option>
-                    <option value="custom">自定义用户代理</option>
-                </select>
-            </div>
-            
-            <div id="customUAContainer" class="custom-ua">
-                <div class="form-group">
-                    <label for="customUA">自定义用户代理字符串</label>
-                    <input type="text" id="customUA" placeholder="输入自定义用户代理字符串">
-                    <p class="ua-example">例如: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</p>
-                </div>
-            </div>
-            
-            <div id="uaPreview" class="form-group">
-                <label>用户代理预览</label>
-                <div class="command-output">
-                    <code id="uaPreviewText">尚未选择用户代理</code>
-                </div>
-            </div>
-        </div>
-        
-        <div class="config-section">
-            <h2><i>⚙️</i> 其他选项</h2>
-            <div class="form-group">
-                <div class="checkbox-group">
-                    <input type="checkbox" id="incognito">
-                    <label for="incognito">无痕/隐身模式 (--incognito)</label>
-                </div>
-                
-                <div class="checkbox-group">
-                    <input type="checkbox" id="disableWebSecurity">
-                    <label for="disableWebSecurity">禁用Web安全策略 (--disable-web-security)</label>
-                </div>
-                
-                <div class="checkbox-group">
-                    <input type="checkbox" id="ignoreCertErrors">
-                    <label for="ignoreCertErrors">忽略证书错误 (--ignore-certificate-errors)</label>
-                </div>
-                
-                <div class="checkbox-group">
-                    <input type="checkbox" id="disableExtensions">
-                    <label for="disableExtensions">禁用扩展程序 (--disable-extensions)</label>
-                </div>
-            </div>
-        </div>
-        
-        <div class="config-section">
-            <h2><i>🚀</i> 生成的命令行</h2>
-            
-            <div class="command-output">
-                <code id="commandLine"># 在这里将显示生成的命令行</code>
-            </div>
-            
-            <button id="copyBtn" class="btn btn-copy">复制命令行</button>
-            
-            <div class="form-group" style="margin-top: 20px;">
-                <label>使用说明</label>
-                <div class="path-hint">
-                    <p>1. 复制上面的命令</p>
-                    <p>2. 打开命令提示符(Windows)或终端(Mac/Linux)</p>
-                    <p>3. 粘贴并运行命令</p>
-                    <p>4. 如果提示"找不到chrome"，请手动修改Chrome路径</p>
-                    <p>5. 验证代理：访问 https://whatismyipaddress.com 查看IP是否改变</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>提示: 某些参数可能需要关闭所有Chrome实例后才能生效</p>
-        </div>
-                <p class="links">友情链接：
-            <a href="https://m3u8.xuehuayu.cn?utm_source=chromecmd" target="_blank">m3u8在线播放器</a> |
-            <a href="https://xuehuayu.cn?utm_source=chromecmd" target="_blank">前端壹菜鸟</a> |
-            <a href="https://cainiaoblog.cn?utm_source=chromecmd" target="_blank">菜鸟播客</a>
-        </p>
+    <div id="webtraf_17015" style="width:100%;text-align: center;">
+      <script type="text/javascript" src="https://webtrafic.ru/ads.php?uid=17015" async></script>
     </div>
 
+    <div class="config-section">
+      <h2><i>💻</i> 系统设置</h2>
+      <div class="form-group">
+        <label>选择操作系统</label>
+        <div class="os-selector">
+          <div class="os-btn active" data-os="windows">Windows</div>
+          <div class="os-btn" data-os="macos">macOS</div>
+          <div class="os-btn" data-os="linux">Linux</div>
+        </div>
+      </div>
 
- <script src="./js/index.js"></script>
-    <script>
-            (function () {
-                var bp = document.createElement('script');
-                var curProtocol = window.location.protocol.split(':')[0];
-                if (curProtocol === 'https') {
-                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-                }
-                else {
-                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-                }
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(bp, s);
-            })();
-    </script>
-    <script>
-        (function () {
-            var src = 'https://jspassport.ssl.qhimg.com/11.0.1.js?#{theme.sll_zhanzhang}';
-            document.write('<script src="' + src + '" id="sozz"><\/script>');
-        })();
-    </script>
-    <script>
-        var _hmt = _hmt || []; (function () { var hm = document.createElement("script"); hm.src = 'https://hm.baidu.com/hm.js?#{theme.baidu_analytics}'; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();
-    </script>
-    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-150860401-1'></script>
-    <script>
-        window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }; gtag('js', new Date()); gtag('config', '#{theme.google_analytics}');
-    </script>
+      <div class="form-group">
+        <label for="chromePath">Chrome可执行文件路径</label>
+        <input type="text" id="chromePath" placeholder="将根据系统自动填充默认路径">
+        <p class="path-hint" id="pathHint">默认路径适用于大多数情况，如果Chrome安装在其他位置，请手动修改</p>
+      </div>
+    </div>
 
+    <div class="config-section">
+      <h2><i>🔧</i> 代理设置</h2>
+
+      <div class="three-columns">
+        <div class="form-group">
+          <label for="proxyType">代理类型</label>
+          <select id="proxyType">
+            <option value="http">HTTP/HTTPS</option>
+            <option value="socks4">SOCKS4</option>
+            <option value="socks5">SOCKS5</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="proxyServer">代理服务器地址</label>
+          <input type="text" id="proxyServer" placeholder="例如: 127.0.0.1 或 proxy.example.com">
+          <p class="proxy-format-hint">只需输入IP或域名，不需要端口</p>
+        </div>
+
+        <div class="form-group">
+          <label for="proxyPort">代理端口</label>
+          <input type="number" id="proxyPort" placeholder="例如: 8080" value="8080">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="proxyBypass">代理绕过列表（可选）</label>
+        <input type="text" id="proxyBypass" placeholder="例如: localhost,127.0.0.1,::1">
+        <p class="path-hint">多个地址用逗号分隔，支持通配符 *</p>
+      </div>
+    </div>
+
+    <div class="config-section">
+      <h2><i>👤</i> 用户代理设置</h2>
+      <div class="form-group">
+        <label for="userAgent">选择用户代理</label>
+        <select id="userAgent">
+          <option value="">-- 默认Chrome用户代理 --</option>
+          <option value="mobile">移动设备 (Android Chrome)</option>
+          <option value="tablet">平板设备 (iPad Safari)</option>
+          <option value="desktop_win">桌面设备 (Windows Chrome)</option>
+          <option value="desktop_mac">桌面设备 (Mac Chrome)</option>
+          <option value="desktop_linux">桌面设备 (Linux Chrome)</option>
+          <option value="firefox">Firefox浏览器</option>
+          <option value="safari">Safari浏览器</option>
+          <option value="edge">Edge浏览器</option>
+          <option value="custom">自定义用户代理</option>
+        </select>
+      </div>
+
+      <div id="customUAContainer" class="custom-ua">
+        <div class="form-group">
+          <label for="customUA">自定义用户代理字符串</label>
+          <input type="text" id="customUA" placeholder="输入自定义用户代理字符串">
+          <p class="ua-example">例如: Mozilla/5.0 (Windows NT 10.0; Win64; x64)...</p>
+        </div>
+      </div>
+
+      <div id="uaPreview" class="form-group">
+        <label>用户代理预览</label>
+        <div class="command-output">
+          <code id="uaPreviewText">尚未选择用户代理</code>
+        </div>
+      </div>
+    </div>
+
+    <div class="config-section">
+      <h2><i>⚙️</i> 高级选项</h2>
+
+      <!-- 安全相关 -->
+      <div class="option-category category-security">
+        <h3>🔒 跨域与安全</h3>
+        <div class="checkbox-group"><input type="checkbox" id="disableWebSecurity"><label
+            for="disableWebSecurity">禁用Web安全策略 (--disable-web-security)</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="allowRunningInsecureContent"><label
+            for="allowRunningInsecureContent">允许运行不安全内容 (--allow-running-insecure-content)</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="disableSiteIsolation"><label
+            for="disableSiteIsolation">禁用站点隔离 (--disable-site-isolation-trials)</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="reduceSecurity"><label for="reduceSecurity">降低安全级别
+            (--reduce-security-for-testing)</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="ignoreCertErrors"><label for="ignoreCertErrors">忽略证书错误
+            (--ignore-certificate-errors)</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="noSandbox"><label for="noSandbox">禁用沙箱
+            (--no-sandbox)</label></div>
+      </div>
+
+      <!-- 隐私/调试 -->
+      <div class="option-category category-privacy">
+        <h3>🛠️ 隐私与调试</h3>
+        <div class="checkbox-group"><input type="checkbox" id="incognito"><label for="incognito">无痕模式
+            (--incognito)</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="remoteDebugging"><label for="remoteDebugging">开启远程调试端口
+            (--remote-debugging-port=9222)</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="noFirstRun"><label for="noFirstRun">跳过首次运行检查
+            (--no-first-run)</label></div>
+      </div>
+
+      <!-- 界面行为 -->
+      <div class="option-category category-ui">
+        <h3>🖥️ 界面与行为</h3>
+        <div class="checkbox-group"><input type="checkbox" id="disableExtensions"><label for="disableExtensions">禁用扩展程序
+            (--disable-extensions)</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="disableGpu"><label for="disableGpu">禁用GPU加速
+            (--disable-gpu)</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="startMaximized"><label for="startMaximized">启动时最大化
+            (--start-maximized)</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="disablePopupBlocking"><label
+            for="disablePopupBlocking">禁用弹窗拦截 (--disable-popup-blocking)</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="disableInfobars"><label for="disableInfobars">禁用自动化提示
+            (--disable-infobars)</label></div>
+      </div>
+
+      <!-- 网络优化 -->
+      <div class="option-category category-network">
+        <h3>🌐 网络相关</h3>
+        <div class="checkbox-group"><input type="checkbox" id="disableTranslate"><label for="disableTranslate">禁用自动翻译
+            (--disable-translate)</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="disableBackgroundNetworking"><label
+            for="disableBackgroundNetworking">禁用后台网络服务 (--disable-background-networking)</label></div>
+      </div>
+    </div>
+
+    <div class="config-section">
+      <h2><i>🚀</i> 生成的命令行</h2>
+      <div class="command-output"><code id="commandLine"># 在这里将显示生成的命令行</code></div>
+      <button id="copyBtn" class="btn btn-copy">复制命令行</button>
+      <div class="form-group" style="margin-top: 20px;">
+        <label>使用说明</label>
+        <div class="path-hint">
+          <p>⚠️ 提示: 某些参数可能需要关闭所有Chrome实例后才能生效</p>
+          <p>⚠️ 跨域相关参数会降低浏览器安全性，仅用于开发和测试，请在可信环境中使用</p>
+          <p>1. 复制上面的命令</p>
+          <p>2. 打开命令提示符(Windows)或终端(Mac/Linux)</p>
+          <p>3. 粘贴并运行命令</p>
+          <p>4. 如果提示"找不到chrome"，请手动修改Chrome路径</p>
+          <p>5. 验证代理：访问 https://whatismyipaddress.com 查看IP是否改变</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p class="links">友情链接：
+        <a href="https://chrome.xuehuayu.cn?utm_source=m3u8player" target="_blank">Chrome命令行参数生成器</a> |
+        <a href="https://xuehuayu.cn?utm_source=m3u8player" target="_blank">前端壹菜鸟</a> |
+        <a href="https://cainiaoblog.cn?utm_source=m3u8player" target="_blank">菜鸟播客</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="./js/index.js"> </script>
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <script>
+    (function () {
+      var src = 'https://jspassport.ssl.qhimg.com/11.0.1.js?#{theme.sll_zhanzhang}';
+      document.write('<script src="' + src + '" id="sozz"><\/script>');
+    })();
+  </script>
+  <script>
+    var _hmt = _hmt || []; (function () { var hm = document.createElement("script"); hm.src = 'https://hm.baidu.com/hm.js?#{theme.baidu_analytics}'; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();
+  </script>
+  <script async src='https://www.googletagmanager.com/gtag/js?id=UA-150860401-1'></script>
+  <script>
+    window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }; gtag('js', new Date()); gtag('config', '#{theme.google_analytics}');
+  </script>
 </body>
+
 </html>
