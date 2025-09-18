@@ -283,6 +283,34 @@ select:focus {
   border-color: #f0ad4e;
 }
 
+.donate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 24px auto;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.afd {
+  width: 140px;
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 8px;
+  border: 1px solid #1890ff;
+  background: url(../img/afd.png);
+  background-repeat: no-repeat;
+  background-size: 140px 40px;
+  background-position: center center;
+  cursor: pointer;
+}
+
 .links {
   padding: 5px 10px;
   text-align: center;
