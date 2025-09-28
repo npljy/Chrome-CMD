@@ -159,7 +159,7 @@ select:focus {
 }
 
 .command-output {
-  background: #f8f9fa;
+  background: #f8f9fa88;
   padding: 20px;
   border-radius: 5px;
   margin-top: 20px;
@@ -175,7 +175,7 @@ select:focus {
 }
 
 .btn {
-  background: #4285f4;
+  background: #4285f488;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -187,11 +187,11 @@ select:focus {
 }
 
 .btn:hover {
-  background: #3367d6;
+  background: #3367d688;
 }
 
 .btn-copy {
-  background: #34a853;
+  background: #34a85388;
   margin-top: 15px;
 }
 
@@ -254,14 +254,14 @@ select:focus {
   padding: 8px 15px;
   border: 2px solid #ddd;
   border-radius: 5px;
-  background: #f8f9fa;
+  background: #f8f9fa88;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s;
 }
 
 .os-btn.active {
-  background: #4285f4;
+  background: #4285f488;
   color: white;
   border-color: #4285f4;
 }
@@ -293,7 +293,7 @@ select:focus {
   margin-bottom: 25px;
   padding: 15px;
   border-radius: 8px;
-  background: #fdfdfd;
+  background: #fdfdfd88;
   border-left: 5px solid #ccc;
 }
 
@@ -357,7 +357,7 @@ select:focus {
   text-align: center;
   padding: 5px 10px;
   text-align: center;
-  background-color: #fff;
+  background-color: #ffffff88;
   border-top: 1px solid #43484f;
 }
 
