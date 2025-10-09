@@ -3,7 +3,7 @@
 
 ### 体验地址
 
-[https://chrome.xuehuayu.cn](https://chrome.xuehuayu.cn/about)
+[https://chrome.xuehuayu.cn](https://chrome.xuehuayu.cn/&utm_source=https://github.com/npljy)
 
 ### 是什么
 
