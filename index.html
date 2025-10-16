@@ -78,6 +78,15 @@
 </head>
 
 <body>
+
+  <!-- 语言切换按钮 -->
+  <div class="language-switcher">
+    <button id="language-toggle" class="lang-btn">
+      <span class="lang-icon">🌐</span>
+      <span id="lang-text">English</span>
+    </button>
+  </div>
+
   <div class="hd">
     <div class="link-list">
       <a href="https://cainiaoblog.cn">首页</a>
@@ -87,14 +96,6 @@
   </div>
 
   <div class="container">
-
-    <!-- 语言切换按钮 -->
-    <div class="language-switcher">
-      <button id="language-toggle" class="lang-btn">
-        <span class="lang-icon">🌐</span>
-        <span id="lang-text">English</span>
-      </button>
-    </div>
 
     <header>
       <h1>Chrome命令行参数生成器</h1>
@@ -359,7 +360,7 @@
   </p>
 
 
-   <script>
+  <script>
     // 语言切换功能
     document.getElementById('language-toggle').addEventListener('click', function () {
       const currentLang = document.documentElement.lang;
@@ -383,7 +384,7 @@
       document.getElementById('language-toggle').textContent = 'EN';
     }
   </script>
-  
+
 </body>
 
 </html>
