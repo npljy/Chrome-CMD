@@ -44,9 +44,16 @@ document.addEventListener('DOMContentLoaded', function () {
     'linux': '如果使用Chrome而不是Chromium，请检查路径是否正确'
   };
 
+  const pathHintsEn = {
+    'windows': 'The default path works for most cases. If Chrome is installed elsewhere, please modify it manually.',
+    'macos': 'If Chrome is not in the default location, please modify the path manually.',
+    'linux': 'If using Chrome instead of Chromium, please check if the path is correct'
+  }
+
   function updatePath() {
+    const lang = window.location.href.includes('/index-en.html') ? 'en' : 'zh';
     chromePath.value = defaultPaths[currentOS];
-    pathHint.textContent = pathHints[currentOS];
+    pathHint.textContent = lang === 'en' ? pathHintsEn[currentOS] : pathHints[currentOS];
     updateCommandLine();
   }
 
