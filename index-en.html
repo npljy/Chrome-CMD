@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Free, Easy-to-Use, Professional Online Chrome Command Line Argument Generator - Novice Toolbox</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free, easy-to-use, professional online Chrome command line argument generator. No installation or software download required, directly generate Chrome command line arguments.">
+  <meta name="keywords" content="Chrome, command line, arguments, generator, Chrome command line argument generator">
+  <meta name="google-adsense-account" content="ca-pub-8385136408348258">
+  <!-- 3. Open Graph (for social sharing) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free, Easy-to-Use, Professional Online Chrome Command Line Argument Generator">
+  <meta property="og:description" content="No installation or software download required, directly generate Chrome command line arguments.">
+  <meta property="og:url" content="https://chrome.xuehuayu.cn/">
+  <meta property="og:site_name" content="Free, Easy-to-Use, Professional Online Chrome Command Line Argument Generator">
+
+  <!-- 4. Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free, Easy-to-Use, Professional Online Chrome Command Line Argument Generator">
+  <meta name="twitter:description" content="Free, easy-to-use, professional online Chrome command line argument generator.">
+
+  <!-- 6. Canonical Link -->
+  <link rel="canonical" href="https://chrome.xuehuayu.cn/">
+  <link href="./css/index.css" rel="stylesheet">
+  <script src="./js/index.js"> </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8385136408348258"
+    crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ETCMPGS7S6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-ETCMPGS7S6');
+  </script>
+
+  <script src="https://hm.baidu.com/hm.js?011f0b44e8452bfa57fbfa23c5fe7683"></script>
+  <script src="https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba" id="sozz"></script>
+
+  <script>
+    (function () {
+      const bp = document.createElement('script');
+      const curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+
+      document.head.append(bp)
+    })();
+  </script>
+  <!-- 5. Most Important: Structured Data (Declare this is a Web Application) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Free, Easy-to-Use, Professional Online Chrome Command Line Argument Generator",
+      "url": "https://chrome.xuehuayu.cn/",
+      "description": "Professional online Chrome command line argument generator. No installation or software download required, directly generate Chrome command line arguments.",
+      "keywords": "Chrome, command line, arguments, generator, Chrome command line argument generator",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Any",
+      "permissions": "browser",
+      "featureList": [
+        "No download or installation required",
+        "Chrome command line",
+        "Argument generator",
+        "Open and use immediately"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Front End Novice"
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="hd">
+    <div class="link-list">
+      <a href="https://cainiaoblog.cn">Home</a>
+      <a href="https://m3u8.xuehuayu.cn/?utm_source=https://chrome.xuehuayu.cn">m3u8 Accelerated Player</a>
+      <a href="./about.html">About</a>
+    </div>
+  </div>
+
+  <div class="container">
+        <!-- 语言切换按钮 -->
+    <div class="language-switcher">
+      <button id="language-toggle" class="lang-btn">
+        <span class="lang-icon">🌐</span>
+        <span id="lang-text">中文</span>
+      </button>
+    </div>
+    <header>
+      <h1>Chrome Command Line Argument Generator</h1>
+      <p class="description">Generate Chrome startup arguments through a visual interface, configure proxy, user agent, and other settings</p>
+    </header>
+
+    <div id="webtraf_17015" style="width:100%;display: flex;justify-content: center; align-items: center;">
+      <script type="text/javascript" src="https://webtrafic.ru/ads.php?uid=17015" async></script>
+    </div>
+
+    <div class="config-section">
+      <h2>
+        <i>💻</i> System Settings
+      </h2>
+      <div class="form-group">
+        <label>Select Operating System</label>
+        <div class="os-selector">
+          <div class="os-btn active" data-os="windows">Windows</div>
+          <div class="os-btn" data-os="macos">macOS</div>
+          <div class="os-btn" data-os="linux">Linux</div>
+        </div>
+        <p class="option-hint">Automatically sets default paths and arguments based on the operating system</p>
+      </div>
+
+      <div class="form-group">
+        <label for="chromePath">Chrome Executable File Path</label>
+        <input type="text" id="chromePath" placeholder="Default path will be auto-filled based on the system">
+        <p class="path-hint" id="pathHint">The default path works for most situations. If Chrome is installed elsewhere, please modify it manually.</p>
+      </div>
+    </div>
+
+    <div class="config-section">
+      <h2>
+        <i>🔧</i> Proxy Settings
+      </h2>
+
+      <div class="three-columns">
+        <div class="form-group">
+          <label for="proxyType">Proxy Type</label>
+          <select id="proxyType">
+            <option value="http">HTTP/HTTPS</option>
+            <option value="socks4">SOCKS4</option>
+            <option value="socks5">SOCKS5</option>
+          </select>
+          <p class="proxy-format-hint">Select the appropriate proxy protocol, commonly HTTP or SOCKS5</p>
+        </div>
+
+        <div class="form-group">
+          <label for="proxyServer">Proxy Server Address</label>
+          <input type="text" id="proxyServer" placeholder="e.g., 127.0.0.1 or proxy.example.com">
+          <p class="proxy-format-hint">Only enter the IP or domain name, no port needed</p>
+        </div>
+
+        <div class="form-group">
+          <label for="proxyPort">Proxy Port</label>
+          <input type="number" id="proxyPort" placeholder="e.g., 7897 or 3067" value="">
+          <p class="proxy-format-hint">Enter the port number corresponding to the proxy server, e.g., 7897 or 3067</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="proxyBypass">Proxy Bypass List (Optional)</label>
+        <input type="text" id="proxyBypass" placeholder="e.g., localhost,127.0.0.1,::1">
+        <p class="path-hint">Separate multiple addresses with commas, supports wildcard *</p>
+      </div>
+    </div>
+
+    <div class="config-section">
+      <h2>
+        <i>👤</i> User Agent Settings
+      </h2>
+      <div class="form-group">
+        <label for="userAgent">Select User Agent</label>
+        <select id="userAgent">
+          <option value="">-- Default Chrome User Agent --</option>
+          <option value="mobile">Mobile Device (Android Chrome)</option>
+          <option value="tablet">Tablet Device (iPad Safari)</option>
+          <option value="desktop_win">Desktop Device (Windows Chrome)</option>
+          <option value="desktop_mac">Desktop Device (Mac Chrome)</option>
+          <option value="desktop_linux">Desktop Device (Linux Chrome)</option>
+          <option value="firefox">Firefox Browser</option>
+          <option value="safari">Safari Browser</option>
+          <option value="edge">Edge Browser</option>
+          <option value="custom">Custom User Agent</option>
+        </select>
+        <p class="proxy-format-hint">Change the browser identity, often used for debugging access effects on different devices</p>
+      </div>
+
+      <div id="customUAContainer" class="custom-ua">
+        <div class="form-group">
+          <label for="customUA">Custom User Agent String</label>
+          <input type="text" id="customUA" placeholder="Enter custom user agent string">
+          <p class="ua-example">Example: Mozilla/5.0 (Windows NT 10.0; Win64; x64)...</p>
+          <p class="proxy-format-hint">Only takes effect when "Custom User Agent" is selected; requires the full UA string</p>
+        </div>
+      </div>
+
+      <div id="uaPreview" class="form-group">
+        <label>User Agent Preview</label>
+        <div class="command-output">
+          <code id="uaPreviewText">No user agent selected yet</code>
+        </div>
+        <p class="proxy-format-hint">Preview the final UA string used, convenient for confirming if the setting is correct</p>
+      </div>
+    </div>
+
+    <div class="config-section">
+      <h2>
+        <i>⚙️</i> Advanced Options
+      </h2>
+
+      <!-- Security-related - Existing notes, not changing -->
+      <div class="option-category category-security">
+        <h3>🔒 Cross-Origin & Security</h3>
+        <div class="checkbox-group">
+          <input type="checkbox" id="disableWebSecurity">
+          <label for="disableWebSecurity">
+            Disable Web Security (--disable-web-security)
+          </label>
+        </div>
+        <p class="option-hint">Allow cross-origin requests, ignore same-origin policy ⚠️ Strongly not recommended for use in production environments</p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="allowRunningInsecureContent">
+          <label for="allowRunningInsecureContent">Allow running insecure content (--allow-running-insecure-content)</label>
+        </div>
+        <p class="option-hint">Allow HTTPS pages to load HTTP resources ⚠️ May cause security warnings</p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="disableSiteIsolation">
+          <label for="disableSiteIsolation">Disable site isolation (--disable-site-isolation-trials)</label>
+        </div>
+        <p class="option-hint">May improve performance but reduces security ⚠️ Use with caution</p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="reduceSecurity">
+          <label for="reduceSecurity">Reduce security level (--reduce-security-for-testing)</label>
+        </div>
+        <p class="option-hint">For testing purposes, disables some security restrictions ⚠️ Do not enable for daily browsing</p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="ignoreCertErrors">
+          <label for="ignoreCertErrors">Ignore certificate errors (--ignore-certificate-errors)</label>
+        </div>
+        <p class="option-hint">Suitable for debugging HTTPS services, ⚠️ Vulnerable to man-in-the-middle attacks</p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="noSandbox">
+          <label for="noSandbox">Disable sandbox (--no-sandbox)</label>
+        </div>
+        <p class="option-hint">⚠️ Significantly reduces security, use only in container environments or for debugging</p>
+      </div>
+
+      <!-- Privacy/Debugging -->
+      <div class="option-category category-privacy">
+        <h3>🛠️ Privacy & Debugging</h3>
+        <div class="checkbox-group">
+          <input type="checkbox" id="incognito">
+          <label for="incognito">Incognito Mode (--incognito)</label>
+        </div>
+        <p class="option-hint">Does not save browsing history and cache, but downloaded files and bookmarks are still retained</p>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="remoteDebugging">
+          <label for="remoteDebugging">Enable Remote Debugging Port (--remote-debugging-port=9222)</label>
+        </div>
+        <p class="option-hint">Allows external debugging tools to connect ⚠️ Recommended to enable only for local development</p>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="noFirstRun">
+          <label for="noFirstRun">Skip First Run Check (--no-first-run)</label>
+        </div>
+        <p class="option-hint">Suitable for automated testing, avoids the welcome page on first startup</p>
+      </div>
+
+      <!-- UI Behavior -->
+      <div class="option-category category-ui">
+        <h3>🖥️ Interface & Behavior</h3>
+        <div class="checkbox-group">
+          <input type="checkbox" id="disableExtensions">
+          <label for="disableExtensions">Disable Extensions (--disable-extensions)</label>
+        </div>
+        <p class="option-hint">Does not load installed extensions at startup, suitable for troubleshooting extension compatibility issues</p>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="disableGpu">
+          <label for="disableGpu">Disable GPU Acceleration (--disable-gpu)</label>
+        </div>
+        <p class="option-hint">Use in some virtual machines or when graphics card drivers are abnormal ⚠️ May reduce performance</p>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="startMaximized">
+          <label for="startMaximized">Start Maximized (--start-maximized)</label>
+        </div>
+        <p class="option-hint">Suitable for scenarios requiring full-screen display, such as demonstrations or automated scripts</p>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="disablePopupBlocking">
+          <label for="disablePopupBlocking">Disable Popup Blocking (--disable-popup-blocking)</label>
+        </div>
+        <p class="option-hint">Allows websites to freely open new windows ⚠️ May cause ad popups</p>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="disableInfobars">
+          <label for="disableInfobars">Disable Automation Info Bars (--disable-infobars)</label>
+        </div>
+        <p class="option-hint">Removes the "Chrome is being controlled by automated test software" prompt, often used in automated testing</p>
+      </div>
+
+      <!-- Network Optimization -->
+      <div class="option-category category-network">
+        <h3>🌐 Network Related</h3>
+        <div class="checkbox-group">
+          <input type="checkbox" id="disableTranslate">
+          <label for="disableTranslate">Disable Auto-Translate (--disable-translate)</label>
+        </div>
+        <p class="option-hint">Turns off Google Translate prompts, suitable for testing multi-language pages</p>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="disableBackgroundNetworking">
+          <label for="disableBackgroundNetworking">Disable Background Networking (--disable-background-networking)</label>
+        </div>
+        <p class="option-hint">Prevents Chrome from making additional requests in the background ⚠️ May affect normal functionality</p>
+      </div>
+    </div>
+
+
+    <div class="config-section">
+      <h2>
+        <i>🚀</i> Generated Command Line
+      </h2>
+      <div class="command-output">
+        <code id="commandLine"># The generated command line will be displayed here</code>
+      </div>
+      <button id="copyBtn" class="btn btn-copy">Copy Command Line</button>
+      <div class="form-group" style="margin-top: 20px;">
+        <label>Usage Instructions</label>
+        <div class="path-hint">
+          <p>⚠️ Note: Some arguments may require closing all Chrome instances to take effect.</p>
+          <p>⚠️ Cross-origin related arguments reduce browser security, use only for development and testing in trusted environments.</p>
+          <p>1. Copy the command above</p>
+          <p>2. Open Command Prompt (Windows) or Terminal (Mac/Linux)</p>
+          <p>3. Paste and run the command</p>
+          <p>4. If prompted "chrome not found", please manually modify the Chrome path</p>
+          <p>5. Verify proxy: Visit https://whatismyipaddress.com to see if the IP has changed</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer">
+      <div class="donate">
+        <div class="msg">Buy the author a coffee:</div>
+        <a class="afd" href="https://ifdian.net/order/create?user_id=1f326f88329e11eeb16752540025c377" target="_blank"
+          rel="noopener" title="Go to Aifadian to support the author"></a>
+      </div>
+    </div>
+  </div>
+  <p class="links">Friend Links:
+    <a href="https://m3u8.xuehuayu.cn?utm_source=https://chrome.xuehuayu.cn" target="_blank">m3u8 Accelerated Player</a> |
+    <a href="https://laonongmin.online?utm_source=https://chrome.xuehuayu.cn" target="_blank">Free Video APP</a> |
+    <a href="https://chromewebstore.google.com/detail/kk-player/pegiockicjmdnkjbnppeeakeogdkegac?hl=zh-CN&utm_source=https://chrome.xuehuayu.cn"
+      target="_blank">Free Video Extension</a> |
+    <a href="https://jc.zzmy.dpdns.org/?utm_source=https://chrome.xuehuayu.cn" target="_blank">Cheap Airport</a> |
+    <a href="https://h5.lot-ml.com/ProductEn/Index/1be1066f15176ef6/?utm_source=https://chrome.xuehuayu.cn"
+      target="_blank">Four Major Carriers Permanent High Data Mobile Cards</a>
+  </p>
+
+  <script>
+    // 语言切换功能
+    document.getElementById('language-toggle').addEventListener('click', function () {
+      const currentLang = document.documentElement.lang;
+      if (currentLang === 'en') {
+        // 切换到中文
+        window.location.href = './index-zh.html?lang=zh-cn';
+      } else {
+        // 切换到英文
+        window.location.href = './index-en.html?lang=en';
+      }
+    });
+
+    // 根据URL参数设置初始语言
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang');
+    if (lang === 'en') {
+      document.documentElement.lang = 'en';
+      document.getElementById('language-toggle').textContent = '中文';
+    } else {
+      document.documentElement.lang = 'zh-cn';
+      document.getElementById('language-toggle').textContent = 'EN';
+    }
+  </script>
+
+</body>
+
+</html>

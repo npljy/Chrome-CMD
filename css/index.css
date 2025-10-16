@@ -30,6 +30,8 @@ body::before {
   opacity: 0.5;
 }
 
+
+
 .container {
   position: relative;
   z-index: 1;
@@ -40,6 +42,44 @@ body::before {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
+
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.lang-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.lang-btn:active {
+  transform: translateY(0);
+}
+
+.lang-icon {
+  font-size: 16px;
+}
+
 
 .hd {
   position: relative;
@@ -52,7 +92,7 @@ body::before {
 }
 
 .hd .link-list {
-  padding: 0  ;
+  padding: 0;
   height: 50px;
   width: 100%;
   max-width: 1200px;
@@ -213,19 +253,13 @@ select:focus {
   gap: 20px;
 }
 
-@media all and (orientation : portrait){
-  body::before  {
+@media all and (orientation : portrait) {
+  body::before {
     background: url(https://www.loliapi.com/acg/pe/) #fff;
     background-size: auto 100%;
   }
 }
 
-@media (max-width: 768px) {
-  .three-columns,
-  .two-columns {
-    grid-template-columns: 1fr;
-  }
-}
 
 .custom-ua {
   display: none;
@@ -370,4 +404,23 @@ select:focus {
 
 .links a:hover {
   text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
+  .language-switcher {
+    top: 10px;
+    right: 10px;
+  }
+
+  .lang-btn {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+
+  .three-columns,
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
 }
