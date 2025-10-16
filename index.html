@@ -81,10 +81,10 @@
 
   <!-- 语言切换按钮 -->
   <div class="language-switcher">
-    <button id="language-toggle" class="lang-btn">
+    <a class="lang-btn" href="./index-en.html" title="Switch to English">
       <span class="lang-icon">🌐</span>
       <span id="lang-text">English</span>
-    </button>
+    </a>
   </div>
 
   <div class="hd">
@@ -358,32 +358,6 @@
     <a href="https://h5.lot-ml.com/ProductEn/Index/1be1066f15176ef6/?utm_source=https://chrome.xuehuayu.cn"
       target="_blank">四大运营商永久大流量手机卡</a>
   </p>
-
-
-  <script>
-    // 语言切换功能
-    document.getElementById('language-toggle').addEventListener('click', function () {
-      const currentLang = document.documentElement.lang;
-      if (currentLang === 'zh-cn') {
-        // 切换到英文
-        window.location.href = './index-en.html?lang=en';
-      } else {
-        // 切换到中文
-        window.location.href = './index-zh.html?lang=zh-cn';
-      }
-    });
-
-    // 根据URL参数设置初始语言
-    const urlParams = new URLSearchParams(window.location.search);
-    const lang = urlParams.get('lang');
-    if (lang === 'en') {
-      document.documentElement.lang = 'en';
-      document.getElementById('language-toggle').textContent = '中文';
-    } else {
-      document.documentElement.lang = 'zh-cn';
-      document.getElementById('language-toggle').textContent = 'EN';
-    }
-  </script>
 
 </body>
 
