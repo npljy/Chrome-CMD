@@ -2,7 +2,7 @@
 !(function () {
   document.addEventListener('DOMContentLoaded', function () {
     const url = new URL(window.location.href);
-    if (url.searchParams.get('url')) return;
+
     fetch('https://ipcheck.xuehuayu.cn')
       .then(res => res.json())
       .then(data => {
