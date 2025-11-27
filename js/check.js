@@ -13,6 +13,7 @@
           if (url.hostname === 'm3u8.cainiaoblog.cn') {
             btn.innerHTML = '中国站';
             btn.href = href.replace('://m3u8.cainiaoblog.cn', '://m3u8.xuehuayu.cn');
+            btn.style.display = '';
           } else {
             btn.style.display = 'none';
           }
@@ -20,6 +21,7 @@
           if (url.hostname === 'm3u8.xuehuayu.cn') {
             btn.innerHTML = '国际站';
             btn.href = href.replace('://m3u8.xuehuayu.cn', '://m3u8.cainiaoblog.cn');
+            btn.style.display = '';
           } else {
             btn.style.display = 'none';
           }
