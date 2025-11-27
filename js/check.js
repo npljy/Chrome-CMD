@@ -5,14 +5,18 @@
     .then(res => res.json())
     .then(data => {
       const href = url.toString();
+      const btn = document.getElementById('area');
       if (data.isChina) {
-        if (window.location.hostname === 'chrome.cainiaoblog.cn') {
-          window.location.href = href.replace('://chrome.cainiaoblog.cn', '://chrome.xuehuayu.cn');
+        if (window.location.hostname === 'm3u8.cainiaoblog.cn') {
+          btn.innerHTML = '中国站';
+          btn.href = href.replace('://chrome.cainiaoblog.cn', '://chrome.xuehuayu.cn');
         }
       } else {
         if (window.location.hostname === 'm3u8.xuehuayu.cn') {
-          window.location.href = href.replace('://chrome.xuehuayu.cn', '://chrome.cainiaoblog.cn');
+          btn.innerHTML = '国际站';
+          btn.href = href.replace('://chrome.xuehuayu.cn', '://chrome.cainiaoblog.cn');
         }
       }
     });
 })()
+
